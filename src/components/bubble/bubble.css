@@ -2,25 +2,35 @@
   font-family: sans-serif;
   text-align: center;
   transform: scale(0.35);
+  transition-duration: 1s;
   /* width: 50%; */
 }
 
 @media only screen and (max-width: 400px) {
   .bubble {
-    width: 200px;
-    transform: scale(1);
+    width: 500px;
+    transform: scale(3);
   }
 }
 @media only screen and (max-width: 600px) {
   .bubble {
-    width: 300px;
-    transform: scale(1);
+    /* width: 400px; */
+    font-size: 20px;
+    transform: scale(1.5);
   }
 }
 @media only screen and (max-width: 900px) {
   .bubble {
-    max-width: 400px;
+    max-width: 500px;
     transform: scale(0.65);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .bubble {
+    max-width: 700px;
+    transform: scale(0.53);
+    font-size: 30px;
   }
 }
 

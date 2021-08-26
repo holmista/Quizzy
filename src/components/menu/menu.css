@@ -14,6 +14,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 @-webkit-keyframes gradient {
@@ -45,6 +46,7 @@
 .bubble {
   width: 100vw;
   height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,26 +54,59 @@
 }
 .bubblebutton {
   position: absolute;
-  width: 300px;
+  width: 20%;
   height: 150px;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   border-width: 0px;
-  background-color: #f12632;
+  background-color: #ed7839;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-  font-size: 50px;
+  font-size: 2.6vw;
   font-weight: 700;
 }
+
 .bubblebutton:hover {
   cursor: pointer;
   border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
 }
+
 @media only screen and (max-width: 1100px) {
   .bubblebutton {
-    max-width: 95px;
+    /* max-width: 95px; */
     transform: scale(1);
   }
 }
+@media only screen and (max-width: 900px) {
+  .bubblebutton {
+    /* width: 95px; */
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .bubblebutton {
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .bubblebutton {
+    font-size: 3.6vw;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .bubblebutton {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .bubblebutton {
+    font-size: 28px;
+  }
+}
+
 .dropdowns {
   padding-top: 100px;
 }

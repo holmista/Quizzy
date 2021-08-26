@@ -25,7 +25,7 @@ export default function COnfetti() {
         <Confetti
           recycle={show}
           numberOfPieces={200}
-          width={width}
+          width={window.innerWidth}
           height={window.innerHeight}
         />
       </div>
