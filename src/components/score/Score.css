@@ -1,0 +1,19 @@
+.parent {
+  background-image: linear-gradient(to right, #7f7fd5, #86a8e7, #0082c8);
+}
+
+.button {
+  border-radius: 50px;
+  transition: 0.6s;
+  font-weight: 600;
+}
+.button:hover {
+  color: black;
+  transform: scale(1.03);
+}
+
+.score {
+  /* padding-bottom: 1000px; */
+  font-weight: 600;
+  font-size: 17px;
+}

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from './components/menu/Menu';
+import Questions from './components/questions/Questions';
+import {BrowserRouter as Router, Redirect, Route,useHistory} from 'react-router-dom'
+import Score from './components/score/Score';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+
+const THEME = createTheme({
+  typography: {
+   "fontFamily": `'Nunito', sans-serif;`
+  }
+});
 
 function App() {
   return (
+    <ThemeProvider theme={THEME}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route exact path='/'>
+          <Menu/>
+        </Route>
+        <Route exact path = '/:category/:difficulty'>
+            <Questions />
+          </Route>
+        <Route exact path = '/score'>
+            <Score />
+          </Route>
+      </Router>
     </div>
+    </ThemeProvider>
   );
 }
 

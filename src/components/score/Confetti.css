@@ -1,0 +1,35 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: Inter, sans-serif;
+  text-align: center;
+}
+
+.confetti-wrap {
+  background: "#fff";
+  padding: 20px;
+}
+
+.confetti-wrap h3 {
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.text {
+  font-size: 90px;
+  margin-top: 300px;
+  font-weight: black;
+}

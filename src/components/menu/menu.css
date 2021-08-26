@@ -1,0 +1,77 @@
+.parent {
+  /* background-color: #c3829d; */
+  /* position: relative; */
+
+  background: -o-linear-gradient(45deg, #7f7fd5, #86a8e7, #0082c8);
+  background: linear-gradient(45deg, #7f7fd5, #86a8e7, #0082c8);
+  background-size: 600% 100%;
+  -webkit-animation: gradient 15s linear infinite;
+  animation: gradient 15s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+/* .button {
+  height: 40px;
+  max-width: 150px;
+  margin: 0 auto;
+} */
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.bubble {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.35);
+}
+.bubblebutton {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-width: 0px;
+  background-color: #f12632;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  font-size: 50px;
+  font-weight: 700;
+}
+.bubblebutton:hover {
+  cursor: pointer;
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+}
+@media only screen and (max-width: 1100px) {
+  .bubblebutton {
+    max-width: 95px;
+    transform: scale(1);
+  }
+}
+.dropdowns {
+  padding-top: 100px;
+}

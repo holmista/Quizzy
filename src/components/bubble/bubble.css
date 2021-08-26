@@ -1,0 +1,55 @@
+.bubble {
+  font-family: sans-serif;
+  text-align: center;
+  transform: scale(0.35);
+  /* width: 50%; */
+}
+
+@media only screen and (max-width: 400px) {
+  .bubble {
+    width: 200px;
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bubble {
+    width: 300px;
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .bubble {
+    max-width: 400px;
+    transform: scale(0.65);
+  }
+}
+
+.top {
+  animation: rotate 15s infinite linear;
+}
+
+.middle {
+  animation: rotate 18s infinite reverse linear;
+}
+
+.bottom {
+  animation: rotate 20s infinite linear;
+}
+
+.blobs {
+  transition: transform 5s;
+  height: 300px;
+}
+
+.blobs:hover {
+  transform: translate(100px, 100px) scale(0);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(100px, 100px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100px, 100px) rotate(359deg);
+  }
+}
