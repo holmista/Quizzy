@@ -1,7 +1,7 @@
 import './App.css';
 import Menu from './components/menu/Menu';
 import Questions from './components/questions/Questions';
-import {BrowserRouter as Router, Redirect, Route,useHistory} from 'react-router-dom'
+import {BrowserRouter as Router, Route,} from 'react-router-dom'
 import Score from './components/score/Score';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 

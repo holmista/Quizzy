@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useHistory } from "react-router";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -36,7 +36,6 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function Menu() {
   const history = useHistory();
-  console.log(history);
   React.useEffect(() => fetchCategories(), []);
   const fetchCategories = async () => {
     const data = await axios.get("https://opentdb.com/api_category.php");
@@ -96,7 +95,6 @@ export default function Menu() {
               className={classes.underline}
               id="categories"
               labelId="demo-controlled-open-select-label"
-              id="demo-controlled-open-select"
               open={openCategories}
               onClose={handleCategoryClose}
               onOpen={handleCategoryOpen}
@@ -125,7 +123,6 @@ export default function Menu() {
               className={classes.underline}
               id="difficulty"
               labelId="demo-controlled-open-select-label"
-              id="demo-controlled-open-select"
               open={open}
               onClose={handleClose}
               onOpen={handleOpen}

@@ -3,15 +3,11 @@ import Confetti from "react-confetti";
 import "./Confetti.css";
 
 export default function COnfetti() {
-  const [height, setHeight] = useState(null);
-  const [width, setWidth] = useState(null);
   const [show, setShow] = useState(false);
   const confettiRef = useRef(null);
 
   useEffect(() => {
-    setHeight(confettiRef.current.clientHeight);
-    setWidth(confettiRef.current.clientWidth);
-    handleShow();
+      handleShow();
   }, []);
 
   const handleShow = () => {
